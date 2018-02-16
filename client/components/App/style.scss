@@ -1,0 +1,50 @@
+@import '../../../static/css/styles';
+
+$label-font-size: .9rem;
+$value-font-size: 1.5rem;
+$details-font-size: 1.2rem;
+
+header {
+	color: $gray1;
+
+	.spacex-logo {
+		width: 150px;
+	}
+	@media #{$tablets}		{ .spacex-logo { width: 200px; }}
+	@media #{$desktop-sm}	{ .spacex-logo { width: initial; }}
+}
+
+.error { text-align: center; }
+
+.launch {
+	height: 360px;
+	color: $gray1;
+
+	.mission-patch {
+		display: none;
+		img { width: 130px; }
+	}
+
+	@media #{$desktop-sm} { .mission-patch { display: block; }}
+
+	.launch-data {
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+			text-transform: uppercase;
+			font-family: Oswald;
+			font-size: $label-font-size;
+			color: $gray2;
+		}
+		
+		.value {
+			font-size: $value-font-size;
+		}
+
+		.details {
+			font-size: $details-font-size;
+			line-height: $details-font-size;
+		}
+	}
+}
